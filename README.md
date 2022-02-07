@@ -21,7 +21,7 @@ $ docker pull prohetamine/docker-launcher-web-radio
 Also build
 
 ```sh
-$ git clone git@github.com:prohetamine/docker-launcher-web-radio.git
+$ git clone https://github.com/prohetamine/docker-launcher-web-radio.git
 $ cd docker-launcher-web-radio
 $ docker build . -t docker-launcher-web-radio
 ```
