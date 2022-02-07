@@ -8,7 +8,7 @@
 > docker-launcher-web-radio - radio station for nodejs, this example is for the main radio-station library.
 
 ### Why ?
-This example shows how you can start broadcasting using docker without installation difficulties, this is just an example, official documentation can be found in [radio-station](https://github.com/prohetamine/radio-station), if you want an automatic server broadcast without the ability to form the order of tracks, use [docker-node-web radio](https://github.com/prohetamine/docker-node-web-radio)
+This example shows how you can start broadcasting using docker without installation difficulties, this is just an example, official documentation can be found in [radio-station](https://github.com/prohetamine/radio-station), if you want an automatic server broadcast without the ability to form the order of tracks, use [docker-node-web-radio](https://github.com/prohetamine/docker-node-web-radio)
 
 ### Get started
 
