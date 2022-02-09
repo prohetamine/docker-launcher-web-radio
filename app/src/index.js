@@ -1,4 +1,5 @@
 const express         = require('express')
+    , _cors           = require('cors')
     , app             = express()
     , http            = require('http')
     , path            = require('path')
@@ -6,13 +7,26 @@ const express         = require('express')
     , { Server }      = require('socket.io')
     , RadioStation    = require('radio-station')
 
-const server = http.createServer(app)
-    , io = new Server(server)
-
-const port = 8080
-
 const login = process.env.LOGIN
     , password = process.env.PASSWORD
+    , cors = process.env.CORS
+
+const server = http.createServer(app)
+    , io = new Server(server, cors ? {
+        cors: {
+          origin: cors
+        }
+      } : {})
+
+if (cors) {
+  app.use(
+    _cors({
+      origin: cors
+    })
+  )
+}
+
+const port = 8080
 
 ;(async () => {
   const radio = await RadioStation.create({

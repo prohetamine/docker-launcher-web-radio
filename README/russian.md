@@ -33,13 +33,13 @@ $ docker build . -t docker-launcher-web-radio
 Базовая настройка выглядит следующим образом, но ```LOGIN``` и ```PASSWORD``` являются необязательными, они могут быть сгенерированы автоматически во время запуска.
 
 ```sh
-$ docker run --rm -p 8080:8080 -p 9933:9933 -e LOGIN=localhost -e PASSWORD=hackme prohetamine/docker-launcher-web-radio
+$ docker run --rm -p 8080:8080 -p 9933:9933 -e CORS="*" -e LOGIN=localhost -e PASSWORD=hackme prohetamine/docker-launcher-web-radio
 ```
 
 Вы можете предварительно загрузить треки из папки, чтобы не загружать их в интерфейс, это может занять время, которого у нас нет.
 
 ```sh
-docker run --rm -p 8080:8080 -p 9933:9933 -e LOGIN=localhost -e PASSWORD=hackme -v /yourtracksfolder:/tracks-for-load prohetamine/docker-launcher-web-radio
+docker run --rm -p 8080:8080 -p 9933:9933 -e CORS="*" -e LOGIN=localhost -e PASSWORD=hackme -v /yourtracksfolder:/tracks-for-load prohetamine/docker-launcher-web-radio
 ```
 
 ### Контакты

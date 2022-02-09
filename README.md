@@ -33,13 +33,13 @@ Now just run and go to the default address http://localhost:8080 and control the
 The basic setup looks like this, but ```LOGIN``` and ```PASSWORD``` are optional, they can be generated automatically at the time of startup.
 
 ```sh
-$ docker run --rm -p 8080:8080 -p 9933:9933 -e LOGIN=localhost -e PASSWORD=hackme prohetamine/docker-launcher-web-radio
+$ docker run --rm -p 8080:8080 -p 9933:9933 -e CORS="*" -e LOGIN=localhost -e PASSWORD=hackme prohetamine/docker-launcher-web-radio
 ```
 
 You can preload tracks from the folder in order not to upload them in the interface, this may take time that we do not have.
 
 ```sh
-docker run --rm -p 8080:8080 -p 9933:9933 -e LOGIN=localhost -e PASSWORD=hackme -v /yourtracksfolder:/tracks-for-load prohetamine/docker-launcher-web-radio
+docker run --rm -p 8080:8080 -p 9933:9933 -e CORS="*" -e LOGIN=localhost -e PASSWORD=hackme -v /yourtracksfolder:/tracks-for-load prohetamine/docker-launcher-web-radio
 ```
 
 ### Contacts
